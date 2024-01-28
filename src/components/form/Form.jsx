@@ -5,7 +5,7 @@ import Tasks from "../tasks/Tasks";
 const Form = ({ filteredTasks, setTasks }) => {
     return(
         <>
-            <StyledForm onSubmit={event => handleSubmit(event, filteredTasks, setTasks)}>
+            <StyledForm onSubmit={event => handleSubmit(event, filteredTasks.task, setTasks)}>
                 <StyledInput 
                     type="text" 
                     name="textTask"
