@@ -47,6 +47,6 @@ export const GlobalStyles = createGlobalStyle`
     width: 450px;
     height: 300px;
     margin: 50px auto;
-    background-color: orange;
+    /* background-color: orange; */
   }
 `;

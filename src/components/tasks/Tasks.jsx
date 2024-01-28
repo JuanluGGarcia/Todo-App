@@ -1,17 +1,24 @@
-import { StyledInput } from "../form/style";
-import { StyledCircle, StyledTaskWrapper, StyledTasks } from "./style";
+// import { StyledInput } from "../form/style";
+import { StyledCheckBox, StyledTaskWrapper, StyledTasks } from "./style";
 
-const Tasks = () => {
+const Tasks = ({ task, complete}) => {
     return (
         <StyledTaskWrapper>
-            <StyledTasks>
-                <StyledCircle></StyledCircle>
-                <StyledInput 
-                    type="text" 
-                    name="textTask" 
-                    id="" 
-                />
+            <StyledTasks $complete={complete}>
+            return (
+               <> 
+                    <StyledCheckBox
+                        type="checkbox" 
+                        checked={complete}
+                    />
+                                       
+                    <p>{task}</p>
+    
+                </> 
+            );
             </StyledTasks>
+            
+            
 
         </StyledTaskWrapper>
         

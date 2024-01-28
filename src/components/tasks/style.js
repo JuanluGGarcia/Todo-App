@@ -15,13 +15,15 @@ const StyledTasks = styled.div`
 	width: 100%;
 	display: flex;
 	gap: 0.5rem;
+	color: ${({ $complete}) => ($complete ? '#8c8ca2' : 'c8cbe7')};
+	text-decoration: ${({ $complete}) => ($complete ? 'line-through' : 'none')};
 `;
 
-const StyledCircle = styled.circle`
+const StyledCheckBox = styled.input`
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
 	border: 1px solid #000;
 `;
 
-export { StyledTaskWrapper, StyledTasks, StyledCircle };
+export { StyledTaskWrapper, StyledTasks, StyledCheckBox };

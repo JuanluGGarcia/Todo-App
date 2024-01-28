@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import Form from './components/form/Form';
 import Header from './components/header/Header';
-import Tasks from './components/tasks/Tasks';
+// import Tasks from './components/tasks/Tasks';
 import { GlobalStyles } from './styles/global-styles';
 import { FILTERS } from './constants/filters';
+import Filters from './components/filters/Filters';
 
 const App = () => {
 	const [filterActive, setFilterActive] = useState(FILTERS.ALL);
@@ -18,11 +19,11 @@ const App = () => {
 				<div className='todoContainer'>
 					<Header />
 					<main>
-						<Form tasks={tasks} setTasks={SetTasks} />
+						<Form tasks={filteredTasks} setTasks={SetTasks} />
 						
-						<Tasks />
+						{/* <Tasks task={filteredTasks}/> */}
 
-						{/* <ButtonsFilters /> */}
+						<Filters tasks={tasks} filterActive={filterActive} setFilterActive={setFilterActive} />
 					</main>
 					
 				</div>
