@@ -2,17 +2,19 @@ import { v4 } from "uuid";
 import { StyledForm, StyledInput } from "./style";
 import Tasks from "../tasks/Tasks";
 
-const Form = ({ filteredTasks, setTasks }) => {
+const Form = ({ tasks, setTasks }) => {
+    console.log(tasks)
     return(
         <>
-            <StyledForm onSubmit={event => handleSubmit(event, filteredTasks.task, setTasks)}>
+            <StyledForm onSubmit={event => handleSubmit(event, tasks, setTasks)}>
                 <StyledInput 
                     type="text" 
                     name="textTask"
                 />
 
             </StyledForm>
-            {filteredTasks.map(task => (
+            
+            {tasks.map(task => (
                 <Tasks 
                     key={task.id}
                     {...task}

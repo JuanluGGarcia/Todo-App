@@ -4,7 +4,7 @@ const Header = () => {
     return <StyledHeaderContainer>
         <StyledTitle>TODO</StyledTitle>
         <StyledDarkMode>
-            <img src="./public/images/icon-sun.svg" alt="icon-sun" />
+            <img src="./images/icon-sun.svg" alt="icon-sun" />
         </StyledDarkMode>
     </StyledHeaderContainer>
 }

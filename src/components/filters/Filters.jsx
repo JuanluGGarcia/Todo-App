@@ -2,9 +2,10 @@ import { FILTERS } from "../../constants/filters";
 import { StyleSpanClearComplete, StyledButtonFilter, StyledFiltersContainer } from "./style";
 
 const Filters = ({ tasks, filterActive, setFilterActive}) => {
+    console.log(tasks.length)
     return (
         <StyledFiltersContainer>
-            <span>XX item left</span>
+            <span>{tasks.length} item left</span>
             <div>
                 <StyledButtonFilter
                     $active = {filterActive === FILTERS.ALL}
