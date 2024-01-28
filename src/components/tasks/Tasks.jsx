@@ -6,7 +6,11 @@ const Tasks = () => {
         <StyledTaskWrapper>
             <StyledTasks>
                 <StyledCircle></StyledCircle>
-                <StyledInput type="text" name="textTask" id="" />
+                <StyledInput 
+                    type="text" 
+                    name="textTask" 
+                    id="" 
+                />
             </StyledTasks>
 
         </StyledTaskWrapper>
